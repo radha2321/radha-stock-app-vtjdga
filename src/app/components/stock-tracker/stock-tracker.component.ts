@@ -30,8 +30,8 @@ export class StockTrackerComponent implements OnInit, OnDestroy {
 
   removeStock(indx: number): void {
     this.stockDisplayList.splice(indx, 1);
-    this.stockInfo = this.stockDisplayList;
     this.stockService.setDataIntoStore(this.stockDisplayList);
+    this.stockInfo = this.stockDisplayList;
   }
 
   createStockTracerForm(): void {
